@@ -1,5 +1,5 @@
 module.exports = {
-  entry: ['./src/index.js'],
+  entry: [ './src/index.js' ],
   output: {
     path: __dirname,
     publicPath: '/',
@@ -11,13 +11,13 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets: ['react', 'es2015', 'stage-1']
+          presets: [ 'react', 'es2015', 'stage-1' ]
         }
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: [ '', '.js', '.jsx' ]
   },
   devServer: {
     historyApiFallback: true,
@@ -27,4 +27,4 @@ module.exports = {
       poll: 1000
     }
   }
-};
+}
