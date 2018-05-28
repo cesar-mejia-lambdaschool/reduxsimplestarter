@@ -1,25 +1,33 @@
-# ReduxSimpleStarter
+# Modern React with Redux
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+Udemy course by Stephen Grider([link](https://www.udemy.com/react-redux/learn/v4/overview))
 
-### Getting Started
+## Table of Contents
+<!-- TOC -->
 
-There are two methods for getting started with this repo.
+- [Modern React with Redux](#modern-react-with-redux)
+  - [Table of Contents](#table-of-contents)
+  - [Progress](#progress)
+  - [Section 01: An Intro to React](#section-01-an-intro-to-react)
+  - [Section 02: AJAX Request with React](#section-02-ajax-request-with-react)
+  - [Section 03: Modeling Application State](#section-03-modeling-application-state)
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+<!-- /TOC -->
 
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
+## Progress
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+- [X] *Section 01: An Intro to React* [2018-05-28]
+- [X] *Section 02: AJAX Request with React* [2018-05-28]
+- [ ] Section 03: Modeling Application State
+- [ ] Section 04: Managing App State with Redux
+- [ ] Section 05: Intermediate Redux: Middleware
+- [ ] Section 06: React Router + Redux Form
+- [ ] Section 07: Bonus - RallyCoding
+- [ ] Section 08: More to Come!
+- [ ] Section 09: React Router + Redux Form
 
-```
-> npm install
-> npm start
-```
+## Section 01: An Intro to React
+
+## Section 02: AJAX Request with React
+
+## Section 03: Modeling Application State
