@@ -6,8 +6,7 @@ import _ from 'lodash'
 import SearchBar from './components/search_bar'
 import VideoList from './components/video_list'
 import VideoDetail from './components/video_detail'
-
-const API_KEY = 'AIzaSyBgxQy0aDqd4m3s4zsXkO-I3Mlv_se0DFk'
+import API_KEY from '../config.js'
 
 class App extends Component {
   constructor (props) {
@@ -21,6 +20,7 @@ class App extends Component {
   }
 
   videoSearch = (term) => {
+    console.log('API_KEY', API_KEY)
     YTSearch({ key: API_KEY, term: term }, (videos) => {
       this.setState({
         videos: videos,

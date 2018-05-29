@@ -3,6 +3,7 @@
 Udemy course by Stephen Grider([link](https://www.udemy.com/react-redux/learn/v4/overview))
 
 ## Table of Contents
+
 <!-- TOC -->
 
 - [Modern React with Redux](#modern-react-with-redux)
