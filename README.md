@@ -19,7 +19,7 @@ Udemy course by Stephen Grider([link](https://www.udemy.com/react-redux/learn/v4
 
 - [X] *Section 01: An Intro to React* [2018-05-28]
 - [X] *Section 02: AJAX Request with React* [2018-05-28]
-- [ ] Section 03: Modeling Application State
+- [X] *Section 03: Modeling Application State* [2018-06-05]
 - [ ] Section 04: Managing App State with Redux
 - [ ] Section 05: Intermediate Redux: Middleware
 - [ ] Section 06: React Router + Redux Form
