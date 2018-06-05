@@ -1,51 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import YTSearch from 'youtube-api-search'
-import _ from 'lodash'
+import { createStore, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
 
-import SearchBar from './components/search_bar'
-import VideoList from './components/video_list'
-import VideoDetail from './components/video_detail'
-import API_KEY from './config'
+import App from './components/app'
+import reducers from './reducers'
 
-class App extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      videos: [],
-      selectedVideo: null
-    }
+const createStoreWithMiddleware = applyMiddleware()(createStore)
 
-    this.videoSearch('marvel')
-  }
-
-  videoSearch = (term) => {
-    console.log('API_KEY', API_KEY)
-    YTSearch({ key: API_KEY, term: term }, (videos) => {
-      this.setState({
-        videos: videos,
-        selectedVideo: videos[0]
-      })
-    })
-  }
-
-  render () {
-    const videoSearch = _.debounce((term) => this.videoSearch(term), 300)
-    return (
-      <div>
-        <div className='nav'>
-          <i className='fab fa-youtube fa-3x' />
-          <div className='nav-heading'>CesarTube</div>
-          <SearchBar onSearchTermChange={videoSearch} />
-        </div>
-        <VideoDetail video={this.state.selectedVideo} />
-        <VideoList
-          videos={this.state.videos}
-          onVideoSelect={(selectedVideo) => this.setState({ selectedVideo })}
-        />
-      </div>
-    )
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById('container'))
+ReactDOM.render(
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
