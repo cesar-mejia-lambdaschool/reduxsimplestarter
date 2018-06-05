@@ -5,10 +5,7 @@ import YTSearch from 'youtube-api-search'
 import SearchBar from './components/search_bar'
 import VideoList from './components/video_list'
 import VideoDetail from './components/video_detail'
-
-const API_KEY = 'AIzaSyBgxQy0aDqd4m3s4zsXkO-I3Mlv_se0DFk'
-// Create a new component. This component should produce
-// some HTML
+import API_KEY from './config'
 
 class App extends Component {
   constructor (props) {
@@ -29,8 +26,5 @@ class App extends Component {
     )
   }
 }
-
-// Take this component's generated HTML and put it
-// on the page (in the DOM)
 
 ReactDOM.render(<App />, document.querySelector('.container'))
