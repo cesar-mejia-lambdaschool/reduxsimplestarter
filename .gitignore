@@ -7,3 +7,5 @@ config.js
 # IntelliJ
 *.iml
 /.idea
+
+config.js

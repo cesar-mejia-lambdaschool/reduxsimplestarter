@@ -4,34 +4,26 @@ class SearchBar extends Component {
   constructor (props) {
     super(props)
     this.state = { term: '' }
-    console.log('in constructor')
-  }
-
-  componentWillMount () {
-    console.log('in componentWillMount')
-  }
-
-  componentDidMount () {
-    console.log('in componentDidMount')
   }
 
   render () {
-    console.log('in render')
     return (
-      <input
-        name='search'
-        type='text'
-        placeholder='Search'
-        onChange={this.onInputChange}
-        value={this.state.term}
-      />
+      <div className='search-bar'>
+        <input
+          name='search'
+          type='text'
+          placeholder='Search'
+          onChange={this.onInputChange}
+          value={this.state.term}
+        />
+      </div>
     )
   }
 
   onInputChange = ({ target }) => {
-    this.setState({
-      term: target.value
-    })
+    const term = target.value
+    this.setState({ term })
+    this.props.onSearchTermChange(term)
   }
 }
 
