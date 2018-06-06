@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import fetchWeather from '../actions/index'
+import { fetchWeather } from '../actions'
 
 class SearchBar extends Component {
   constructor (props) {
@@ -9,7 +9,6 @@ class SearchBar extends Component {
     this.state = {
       term: ''
     }
-    this.onFormSubmit = this.onFormSubmit.bind(this)
   }
 
   onInputChange = (e) => {
@@ -19,9 +18,8 @@ class SearchBar extends Component {
     })
   }
 
-  onFormSubmit (e) {
+  onFormSubmit = (e) => {
     e.preventDefault()
-    console.log(this.props.fetchWeather, 'in formsubmit')
     this.props.fetchWeather(this.state.term)
     this.setState({
       term: ''
