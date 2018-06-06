@@ -1,9 +1,9 @@
 import axios from 'axios'
 import config from '../config'
-export const POSTS_FETCH = 'posts_fetch'
-export const POST_CREATE = 'post_create'
-export const POST_FETCH = 'post_fetch'
-export const POST_DELETE = 'post_delete'
+export const POSTS_FETCH = 'POSTS_FETCH'
+export const POST_CREATE = 'POST_CREATE'
+export const POST_FETCH = 'POST_FETCH'
+export const POST_DELETE = 'POST_DELETE'
 
 const ROOT_URL = 'https://reduxblog.herokuapp.com/api'
 const { API_KEY } = config
@@ -20,8 +20,11 @@ export function fetchPosts () {
 export function createPost (values, cb) {
   const response = axios
     .post(`${ROOT_URL}/posts/${API_KEY}`, values)
-    .then(() => cb())
-  // console.log('ActionCreator - createPosts Launched: ', response)
+    .then((res) => {
+      cb()
+      return res
+    })
+  console.log('ActionCreator - createPosts Launched: ', response)
 
   return {
     type: POST_CREATE,
