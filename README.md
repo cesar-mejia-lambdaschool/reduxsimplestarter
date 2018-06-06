@@ -20,6 +20,7 @@ Udemy course by Stephen Grider([link](https://www.udemy.com/react-redux/learn/v4
 - [X] *Section 04: Managing App State with Redux* [2018-06-06]
 - [X] *Section 05: Intermediate Redux: Middleware* [2018-06-06]
 - [X] *Section 06: React Router + Redux Form (legacy)* [2018-06-06]
-- [ ] Section 07: Bonus - RallyCoding
+- [X] *Section 07: Bonus - RallyCoding* [2018-06-06]
+  - _Finished in a separate project_
 - [X] *Section 08: More to Come!* [2018-06-06]
 - [X] *Section 09: React Router + Redux Form (new-version)* [2018-06-06]
