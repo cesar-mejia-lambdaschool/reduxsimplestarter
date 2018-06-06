@@ -1,14 +1,16 @@
 import _ from 'lodash'
-import { POSTS_FETCH } from '../actions'
+import { POSTS_FETCH, POST_FETCH, POST_DELETE } from '../actions'
 
 export function PostsReducer (state = {}, action) {
-  console.log('In Post-Reducer')
   switch (action.type) {
     case POSTS_FETCH:
-      console.log('REDUCER REPORTING: Received action: ', action)
-      return {
-        posts: _.mapKeys(action.payload.data, 'id')
-      }
+      return _.mapKeys(action.payload.data, 'id')
+
+    case POST_FETCH:
+      const post = action.payload.data
+      return { ...state, [post.id]: post }
+    case POST_DELETE:
+      return _.omit(state, action.payload)
     default:
       return state
   }
